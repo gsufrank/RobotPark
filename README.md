@@ -1,2 +1,2 @@
-# RobotPark
-IT 4530 Senior Project
+# IT 4530 Senior Project - RobotPark
+This project is to use a camera for viewing of the robots and two Raspberry Pi boards (one to be used as a web server and one to be used as the storage system with the means of uploading to the internet.) The videos will be archived on a SD card, stored in the Raspberry Pi which is connected to the camera recording the robots. The archived videos will be retrieved from the board's file system via hyperlinks on the website. 
