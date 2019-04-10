@@ -1,0 +1,111 @@
+pi@webserver:~ $ cd var
+bash: cd: var: No such file or directory
+pi@webserver:~ $ cd pi
+bash: cd: pi: No such file or directory
+pi@webserver:~ $ cd home
+bash: cd: home: No such file or directory
+pi@webserver:~ $ ls
+$          helloworld.py  Pictures       roboticPark                 Videos
+apt-get    install        pi:pi          roboticPark.db
+Desktop    MagPi          Public         rpiWebServerpi@webserver:~
+Documents  Music          python3-flask  sudo
+Downloads  oldconffiles   python_games   Templates
+pi@webserver:~ $ cd ..
+pi@webserver:/home $ cd var
+bash: cd: var: No such file or directory
+pi@webserver:/home $ ls
+pi
+pi@webserver:/home $ cd pi
+pi@webserver:~ $ cd var
+bash: cd: var: No such file or directory
+pi@webserver:~ $ cd ..
+pi@webserver:/home $ cd var
+bash: cd: var: No such file or directory
+pi@webserver:/home $ cd ..
+pi@webserver:/ $ cd var
+pi@webserver:/var $ cd www
+pi@webserver:/var/www $ cd hrml
+bash: cd: hrml: No such file or directory
+pi@webserver:/var/www $ cd html
+pi@webserver:/var/www/html $ sudo mv index.php index.html
+pi@webserver:/var/www/html $ sudo leafpad index.html
+ls
+^C
+pi@webserver:/var/www/html $ cd\
+> cd
+bash: cdcd: command not found
+pi@webserver:/var/www/html $ cd
+pi@webserver:~ $ ls
+$          helloworld.py  Pictures       roboticPark                 Videos
+apt-get    install        pi:pi          roboticPark.db
+Desktop    MagPi          Public         rpiWebServerpi@webserver:~
+Documents  Music          python3-flask  sudo
+Downloads  oldconffiles   python_games   Templates
+pi@webserver:~ $ cd mnt
+bash: cd: mnt: No such file or directory
+pi@webserver:~ $ ls
+$          helloworld.py  Pictures       roboticPark                 Videos
+apt-get    install        pi:pi          roboticPark.db
+Desktop    MagPi          Public         rpiWebServerpi@webserver:~
+Documents  Music          python3-flask  sudo
+Downloads  oldconffiles   python_games   Templates
+pi@webserver:~ $ cd ..
+pi@webserver:/home $ ls
+pi
+pi@webserver:/home $ cd ..
+pi@webserver:/ $ ls
+bin   debootstrap  etc   lib         media  opt   root  sbin  sys  usr
+boot  dev          home  lost+found  mnt    proc  run   srv   tmp  var
+pi@webserver:/ $ cd mnt
+pi@webserver:/mnt $ cd nfs
+pi@webserver:/mnt/nfs $ ls
+small.3gp  small.flv  small.mkv  small.mp4   small.mpg  small.vob   small.wmv
+small.avi  small.m4v  small.mov  small.mpeg  small.mts  small.webm
+pi@webserver:/mnt/nfs $ ls
+small.3gp  small.flv  small.mkv  small.mp4   small.mpg  small.vob   small.wmv
+small.avi  small.m4v  small.mov  small.mpeg  small.mts  small.webm
+pi@webserver:/mnt/nfs $ cd nfsserver
+bash: cd: nfsserver: No such file or directory
+pi@webserver:/mnt/nfs $ sudo mount -t nfs -o nfsvers=3 192.168.1.18:/mnt/nfsserver /mnt/nfs
+pi@webserver:/mnt/nfs $ ls
+small.3gp  small.flv  small.mkv  small.mp4   small.mpg  small.vob   small.wmv
+small.avi  small.m4v  small.mov  small.mpeg  small.mts  small.webm
+pi@webserver:/mnt/nfs $ ls
+small.3gp  small.flv  small.mkv  small.mp4   small.mpg  small.vob   small.wmv
+small.avi  small.m4v  small.mov  small.mpeg  small.mts  small.webm
+pi@webserver:/mnt/nfs $ cd
+pi@webserver:~ $ ls
+$          helloworld.py  Pictures       roboticPark                 Videos
+apt-get    install        pi:pi          roboticPark.db
+Desktop    MagPi          Public         rpiWebServerpi@webserver:~
+Documents  Music          python3-flask  sudo
+Downloads  oldconffiles   python_games   Templates
+pi@webserver:~ $ cd ..
+pi@webserver:/home $ cd ..
+pi@webserver:/ $ ls
+bin   debootstrap  etc   lib         media  opt   root  sbin  sys  usr
+boot  dev          home  lost+found  mnt    proc  run   srv   tmp  var
+pi@webserver:/ $ cd mnt
+pi@webserver:/mnt $ ls
+nfs
+pi@webserver:/mnt $ cd nfs
+pi@webserver:/mnt/nfs $ ls
+lost+found  nfsserver
+pi@webserver:/mnt/nfs $ cd
+pi@webserver:~ $ ls
+$          helloworld.py  Pictures       roboticPark                 Videos
+apt-get    install        pi:pi          roboticPark.db
+Desktop    MagPi          Public         rpiWebServerpi@webserver:~
+Documents  Music          python3-flask  sudo
+Downloads  oldconffiles   python_games   Templates
+pi@webserver:~ $ cd ..
+pi@webserver:/home $ cd ..
+pi@webserver:/ $ ls
+bin   debootstrap  etc   lib         media  opt   root  sbin  sys  usr
+boot  dev          home  lost+found  mnt    proc  run   srv   tmp  var
+pi@webserver:/ $ mv /home/pi/Downloads/small.mp4 /mnt/nfs/nfsserver/
+mv: cannot create regular file '/mnt/nfs/nfsserver/small.mp4': Read-only file system
+pi@webserver:/ $ sudo mv /home/pi/Downloads/small.mp4 /mnt/nfs/nfsserver/
+mv: cannot create regular file '/mnt/nfs/nfsserver/small.mp4': Read-only file system
+pi@webserver:/ $ sudo mount -t nfs -o nfsvers=3 192.168.1.18:/mnt/nfsserver /mnt/nfs
+pi@webserver:/ $ 

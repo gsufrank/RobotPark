@@ -1,0 +1,206 @@
+pi@webserver:~ $ sudo modprobe v4l2loopback video_nr=10 cardlabel="C290_h264"
+modprobe: FATAL: Module v4l2loopback not found in directory /lib/modules/4.14.79-v7+
+pi@webserver:~ $ sudo modprobe v4l2loopback video_nr=10 cardlabel="C290_h264"
+modprobe: FATAL: Module v4l2loopback not found in directory /lib/modules/4.14.79-v7+
+pi@webserver:~ $ sudo modprobe
+modprobe: ERROR: missing parameters. See -h.
+pi@webserver:~ $ sudo modprobe v4l2loopback
+modprobe: FATAL: Module v4l2loopback not found in directory /lib/modules/4.14.79-v7+
+pi@webserver:~ $ modprobe videodev
+modprobe: ERROR: could not insert 'videodev': Operation not permitted
+pi@webserver:~ $ sudo modprobe videodev
+pi@webserver:~ $ make modprobe
+make: *** No rule to make target 'modprobe'.  Stop.
+pi@webserver:~ $ sudo make modprobe
+make: *** No rule to make target 'modprobe'.  Stop.
+pi@webserver:~ $ sudo modprobe v4l2loopback
+modprobe: FATAL: Module v4l2loopback not found in directory /lib/modules/4.14.79-v7+
+pi@webserver:~ $ 
+pi@webserver:~ $ sqlite
+bash: sqlite: command not found
+pi@webserver:~ $ sqlite3
+bash: sqlite3: command not found
+pi@webserver:~ $ sudo apt-get update
+Hit:1 http://archive.raspberrypi.org/debian stretch InRelease
+Get:2 http://raspbian.raspberrypi.org/raspbian stretch InRelease [15.0 kB]     
+Fetched 15.0 kB in 2s (5,146 B/s)  
+Reading package lists... Done
+pi@webserver:~ $ sudo apt-get install sqlite3
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Suggested packages:
+  sqlite3-doc
+The following NEW packages will be installed:
+  sqlite3
+0 upgraded, 1 newly installed, 0 to remove and 7 not upgraded.
+1 not fully installed or removed.
+Need to get 709 kB of archives.
+After this operation, 1,991 kB of additional disk space will be used.
+Get:1 http://mirror.umd.edu/raspbian/raspbian stretch/main armhf sqlite3 armhf 3.16.2-5+deb9u1 [709 kB]
+Fetched 709 kB in 6s (102 kB/s)                                                
+Selecting previously unselected package sqlite3.
+(Reading database ... 123521 files and directories currently installed.)
+Preparing to unpack .../sqlite3_3.16.2-5+deb9u1_armhf.deb ...
+Unpacking sqlite3 (3.16.2-5+deb9u1) ...
+Setting up sqlite3 (3.16.2-5+deb9u1) ...
+Setting up nginx-full (1.10.3-1+deb9u2) ...
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+invoke-rc.d: initscript nginx, action "start" failed.
+● nginx.service - A high performance web server and a reverse proxy server
+   Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+   Active: failed (Result: exit-code) since Thu 2019-01-24 10:28:10 EST; 62ms ago
+     Docs: man:nginx(8)
+  Process: 1619 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=1/FAILURE)
+  Process: 1616 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+
+Jan 24 10:28:08 webserver nginx[1619]: nginx: [emerg] bind() to [::]:80 fai…use)
+Jan 24 10:28:09 webserver nginx[1619]: nginx: [emerg] bind() to 0.0.0.0:80 …use)
+Jan 24 10:28:09 webserver nginx[1619]: nginx: [emerg] bind() to [::]:80 fai…use)
+Jan 24 10:28:09 webserver nginx[1619]: nginx: [emerg] bind() to 0.0.0.0:80 …use)
+Jan 24 10:28:09 webserver nginx[1619]: nginx: [emerg] bind() to [::]:80 fai…use)
+Jan 24 10:28:10 webserver nginx[1619]: nginx: [emerg] still could not bind()
+Jan 24 10:28:10 webserver systemd[1]: nginx.service: Control process exited…us=1
+Jan 24 10:28:10 webserver systemd[1]: Failed to start A high performance we…ver.
+Jan 24 10:28:10 webserver systemd[1]: nginx.service: Unit entered failed state.
+Jan 24 10:28:10 webserver systemd[1]: nginx.service: Failed with result 'ex…de'.
+Hint: Some lines were ellipsized, use -l to show in full.
+dpkg: error processing package nginx-full (--configure):
+ subprocess installed post-installation script returned error exit status 1
+Processing triggers for man-db (2.7.6.1-2) ...
+Errors were encountered while processing:
+ nginx-full
+E: Sub-process /usr/bin/dpkg returned an error code (1)
+pi@webserver:~ $ sudo apt-get -purge nginx
+E: Command line option 'p' [from -purge] is not understood in combination with the other options.
+pi@webserver:~ $ sudo apt-get -purge remove nginx
+E: Command line option 'p' [from -purge] is not understood in combination with the other options.
+pi@webserver:~ $ sudo apt-get -purge
+E: Command line option 'p' [from -purge] is not understood in combination with the other options.
+pi@webserver:~ $ sudo apt-get -purge remove nginx
+E: Command line option 'p' [from -purge] is not understood in combination with the other options.
+pi@webserver:~ $ sudo apt-get --purge remove nginx
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Package 'nginx' is not installed, so not removed
+0 upgraded, 0 newly installed, 0 to remove and 7 not upgraded.
+1 not fully installed or removed.
+After this operation, 0 B of additional disk space will be used.
+Setting up nginx-full (1.10.3-1+deb9u2) ...
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+invoke-rc.d: initscript nginx, action "start" failed.
+● nginx.service - A high performance web server and a reverse proxy server
+   Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+   Active: failed (Result: exit-code) since Thu 2019-01-24 10:30:49 EST; 64ms ago
+     Docs: man:nginx(8)
+  Process: 1847 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=1/FAILURE)
+  Process: 1844 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+
+Jan 24 10:30:47 webserver nginx[1847]: nginx: [emerg] bind() to [::]:80 fai…use)
+Jan 24 10:30:47 webserver nginx[1847]: nginx: [emerg] bind() to 0.0.0.0:80 …use)
+Jan 24 10:30:47 webserver nginx[1847]: nginx: [emerg] bind() to [::]:80 fai…use)
+Jan 24 10:30:48 webserver nginx[1847]: nginx: [emerg] bind() to 0.0.0.0:80 …use)
+Jan 24 10:30:48 webserver nginx[1847]: nginx: [emerg] bind() to [::]:80 fai…use)
+Jan 24 10:30:48 webserver nginx[1847]: nginx: [emerg] still could not bind()
+Jan 24 10:30:49 webserver systemd[1]: nginx.service: Control process exited…us=1
+Jan 24 10:30:49 webserver systemd[1]: Failed to start A high performance we…ver.
+Jan 24 10:30:49 webserver systemd[1]: nginx.service: Unit entered failed state.
+Jan 24 10:30:49 webserver systemd[1]: nginx.service: Failed with result 'ex…de'.
+Hint: Some lines were ellipsized, use -l to show in full.
+dpkg: error processing package nginx-full (--configure):
+ subprocess installed post-installation script returned error exit status 1
+Errors were encountered while processing:
+ nginx-full
+E: Sub-process /usr/bin/dpkg returned an error code (1)
+pi@webserver:~ $ sudo apt-get update
+Hit:1 http://raspbian.raspberrypi.org/raspbian stretch InRelease               
+Hit:2 http://archive.raspberrypi.org/debian stretch InRelease                  
+Reading package lists... Done                      
+pi@webserver:~ $ sudo apt-get clean
+pi@webserver:~ $ sqlite3
+SQLite version 3.16.2 2017-01-06 16:32:41
+Enter ".help" for usage hints.
+Connected to a transient in-memory database.
+Use ".open FILENAME" to reopen on a persistent database.
+sqlite> .open roboticPark
+sqlite> ls
+   ...> ;
+Error: near "ls": syntax error
+sqlite> USE roboticPark
+   ...> ;
+Error: near "USE": syntax error
+sqlite> .databases
+main: /home/pi/roboticPark
+sqlite> .databases
+main: /home/pi/roboticPark
+sqlite> sqlite3 roboticPark.db
+   ...> ;
+Error: near "sqlite3": syntax error
+sqlite> sqlite3 roboticPark.db;
+Error: near "sqlite3": syntax error
+sqlite> roboticPark.db;
+Error: near "roboticPark": syntax error
+sqlite> .open roboticPark.db
+sqlite> .databases
+main: /home/pi/roboticPark.db
+sqlite> drop roboticPark.db
+   ...> ;
+Error: near "roboticPark": syntax error
+sqlite> .close roboticPark.db
+Error: unknown command or invalid arguments:  "close". Enter ".help" for help
+sqlite> .databases
+main: /home/pi/roboticPark.db
+sqlite> CREATE TABLE access(
+   ...> ID INT PRIMARY KE;
+Error: near "KE": syntax error
+sqlite> CREATE TABLE ACCESS(
+   ...> ID INTEGER PRIMARY KEY AUTOINCREMENT,
+   ...> EMAIL TEXT NOT NULL,
+   ...> KEY TEXT NOT NULL
+   ...> );
+sqlite> .tables
+ACCESS
+sqlite> SELECT * FROM ACCESS;
+sqlite> SELECT * FROM ACCESS
+   ...> ;
+sqlite> .indices ?ACCESS?
+sqlite> .schema ACCESS;
+sqlite> .headers on
+sqlite> .mode column
+sqlite> select * from access;\
+   ...> 
+   ...> ;
+Error: unrecognized token: "\"
+sqlite> select * from access;
+sqlite> .schema ACCESS
+CREATE TABLE ACCESS(
+ID INTEGER PRIMARY KEY AUTOINCREMENT,
+EMAIL TEXT NOT NULL,
+KEY TEXT NOT NULL
+);
+sqlite> .header on
+sqlite> pragma table_info('ACCESS')
+   ...> ;
+cid         name        type        notnull     dflt_value  pk        
+----------  ----------  ----------  ----------  ----------  ----------
+0           ID          INTEGER     0                       1         
+1           EMAIL       TEXT        1                       0         
+2           KEY         TEXT        1                       0         
+sqlite> ^C
+sqlite> CREATE TABLE ACCESS(
+   ...> ID INTEGER PRIMARY KEY AUTOINCREMENT,
+   ...> EMAIL TEXT NOT NULL,
+   ...> KEY TEXT NOT NULL
+   ...> );
+Error: table ACCESS already exists
+sqlite> drop table access
+   ...> ;
+sqlite> CREATE TABLE ACCESS(
+   ...> ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+   ...> EMAIL TEXT NOT NULL,
+   ...> KEY TEXT NOT NULL
+   ...> );
+sqlite> 

@@ -1,0 +1,242 @@
+body{
+  font: 15px/1.5 Arial, Helvetica,sans-serif;
+  padding:0;
+  margin:0;
+  background-color:#ffffff;
+}
+
+/* Global */
+.container{
+  width:80%;
+  margin:auto;
+  overflow:hidden;
+}
+
+.container h1{ 
+  font-size: 25px; 
+  font-family: 'Exo 2', sans-serif;
+}
+
+.container h2{ 
+  font-size: 30px; 
+  font-family: 'Fontdiner Swanky', cursive;
+}
+
+ul{
+  margin:0;
+  padding:0;
+}
+
+/* Header **/
+header{
+  background:#041e42;
+  color:#ffffff;
+  padding-top:30px;
+  min-height:70px;
+  border-bottom:#ffffff 3px solid;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: bold;
+}
+
+header a{
+  color:#ffffff;
+  text-decoration:none;
+  text-transform: uppercase;
+  font-size:18px;
+}
+
+header li{
+  float:left;
+  display:inline;
+  padding: 0 20px 0 20px;
+}
+
+header #branding{
+  float:left;
+}
+
+header #branding h1{
+  margin:0;
+}
+
+header nav{
+  float:right;
+  margin-top:10px;
+}
+
+header .highlight, header .current a{
+  color:#a99260;
+  font-weight:bold;
+}
+
+header a:hover{
+  color:#a99260;
+  font-weight:bold;
+}
+
+/* Accordion */
+.accordion {
+  background-color: #f2f2f2;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 65%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  font-weight: bold; 
+}
+
+.active, .accordion:hover {
+  background-color: #b3b3b3;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-width: 65%; 
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion:after {
+  content: '\02795'; 
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; 
+}
+
+/* FAQ */
+#faq { 
+  padding: 5px; 
+  color: #000; 
+  background: #D0ECFC; 
+}
+
+#faq h1 { 
+  text-align: center; 
+}
+
+hr.faq { 
+  width: 32%; 
+  color: black;  
+  float: left; 
+}
+
+/* Footer */
+.footer-distributed{
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px sans-serif;
+
+  padding: 45px 50px;
+  margin-top: 80px;
+}
+
+.footer-distributed .footer-left p{
+  color:  #8f9296;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Footer links */
+
+.footer-distributed p.footer-links{
+  font-size:18px;
+  font-weight: bold;
+  color:  #ffffff;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.footer-distributed p.footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color:  inherit;
+}
+
+.footer-distributed .footer-right{
+  float: right;
+  margin-top: 6px;
+  max-width: 180px;
+}
+
+.footer-distributed .footer-right a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color:  #33383b;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-left: 3px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 600px) {
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-right{
+    text-align: center;
+  }
+
+  .footer-distributed .footer-right{
+    float: none;
+    margin: 0 auto 20px;
+  }
+
+  .footer-distributed .footer-left p.footer-links{
+    line-height: 1.8;
+  }
+}
+
+/* Media Queries */
+@media(max-width: 768px){
+  header #branding,
+  header nav,
+  header nav li,
+  #newsletter h1,
+  #newsletter form,
+  #boxes .box,
+  article#main-col,
+  aside#sidebar{
+    float:none;
+    text-align:center;
+    width:100%;
+  }
+
+  header{
+    padding-bottom:20px;
+  }
+
+  #showcase h1{
+    margin-top:40px;
+  }
+
+  #newsletter button, .quote button{
+    display:block;
+    width:100%;
+  }
+
+  #newsletter form input[type="email"], .quote input, .quote textarea{
+    width:100%;
+    margin-bottom:5px;
+  }
+}

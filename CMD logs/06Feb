@@ -1,0 +1,323 @@
+pi@webserver:~ $ cd etc
+bash: cd: etc: No such file or directory
+pi@webserver:~ $ ls
+$          helloworld.py  Pictures       roboticPark                 Videos
+apt-get    install        pi:pi          roboticPark.db
+Desktop    MagPi          Public         rpiWebServerpi@webserver:~
+Documents  Music          python3-flask  sudo
+Downloads  oldconffiles   python_games   Templates
+pi@webserver:~ $ cd ..
+pi@webserver:/home $ cd ..
+pi@webserver:/ $ ls
+bin   debootstrap  etc   lib         media  opt   root  sbin  sys  usr
+boot  dev          home  lost+found  mnt    proc  run   srv   tmp  var
+pi@webserver:/ $ cd etc
+pi@webserver:/etc $ ls
+adduser.conf            init.d           python2.7
+alternatives            initramfs-tools  python3
+apache2                 inputrc          python3.5
+apparmor.d              insserv.conf.d   rc0.d
+apt                     iproute2         rc1.d
+avahi                   issue            rc2.d
+bash.bashrc             issue.net        rc3.d
+bash_completion         kernel           rc4.d
+bash_completion.d       ldap             rc5.d
+bindresvport.blacklist  ld.so.cache      rc6.d
+binfmt.d                ld.so.conf       rc.local
+bluetooth               ld.so.conf.d     rcS.d
+ca-certificates         ld.so.preload    request-key.conf
+ca-certificates.conf    libaudit.conf    request-key.d
+calendar                libnl-3          resolvconf
+chromium-browser        libpaper.d       resolv.conf
+cifs-utils              libreoffice      resolv.conf.bak
+console-setup           lightdm          resolvconf.conf
+cron.d                  lighttpd         rmt
+cron.daily              locale.alias     rpc
+cron.hourly             locale.gen       rpi-issue
+cron.monthly            localtime        rsyslog.conf
+crontab                 logcheck         rsyslog.d
+cron.weekly             login.defs       RTIMULib.ini
+dbus-1                  logrotate.conf   samba
+debconf.conf            logrotate.d      securetty
+debian_version          machine-id       security
+default                 magic            selinux
+deluser.conf            magic.mime       sensors3.conf
+dhcp                    mailcap          sensors.d
+dhcpcd.conf             mailcap.order    services
+dhcpcd.duid             manpath.config   sgml
+dhcpcd.secret           menu-methods     shadow
+dictionaries-common     mime.types       shadow-
+dillo                   mke2fs.conf      shells
+dkms                    modprobe.d       skel
+dphys-swapfile          modules          ssh
+dpkg                    modules-load.d   ssl
+drirc                   motd             staff-group-for-usr-local
+emacs                   motion           subgid
+environment             mtab             subuid
+esound                  mysql            sudoers
+fake-hwclock.data       nanorc           sudoers.d
+fb.modes                netconfig        sysctl.conf
+ffserver.conf           network          sysctl.d
+fonts                   networks         systemd
+fstab                   newt             terminfo
+fuse.conf               nsswitch.conf    timezone
+gai.conf                openal           timidity
+gconf                   opt              tmpfiles.d
+gdb                     os-release       triggerhappy
+ghostscript             PackageKit       ucf.conf
+gnome                   pam.conf         udev
+groff                   pam.d            udisks2
+group                   papersize        ufw
+group-                  passwd           update-motd.d
+gshadow                 passwd-          usb_modeswitch.conf
+gshadow-                paxctld.conf     usb_modeswitch.d
+gss                     perl             vdpau_wrapper.cfg
+gtk-2.0                 php              vim
+gtk-3.0                 pip.conf         vnc
+host.conf               plymouth         wgetrc
+hostname                polkit-1         wildmidi
+hosts                   ppp              wpa_supplicant
+hosts.allow             profile          X11
+hosts.deny              profile.d        xdg
+idmapd.conf             protocols        xml
+ifplugd                 pulse
+init                    python
+pi@webserver:/etc $ cd apache2
+pi@webserver:/etc/apache2 $ ls
+apache2.conf    conf-enabled  magic           mods-enabled  sites-available
+conf-available  envvars       mods-available  ports.conf    sites-enabled
+pi@webserver:/etc/apache2 $ sudo leafpad apache2.conf
+cd ../..
+ls
+^C
+pi@webserver:/etc/apache2 $ ls
+apache2.conf    conf-enabled  magic           mods-enabled  sites-available
+conf-available  envvars       mods-available  ports.conf    sites-enabled
+pi@webserver:/etc/apache2 $ pwd
+/etc/apache2
+pi@webserver:/etc/apache2 $ cd ../
+pi@webserver:/etc $ ..
+bash: ..: command not found
+pi@webserver:/etc $ cd..
+bash: cd..: command not found
+pi@webserver:/etc $ cd ..
+pi@webserver:/ $ ls
+bin   debootstrap  etc   lib         media  opt   root  sbin  sys  usr
+boot  dev          home  lost+found  mnt    proc  run   srv   tmp  var
+pi@webserver:/ $ cd var/www/html
+pi@webserver:/var/www/html $ ls
+index.html  index.nginx-debian.html  mp4.php  small.mp4
+pi@webserver:/var/www/html $ sudo leafpad index.html
+pi@webserver:/var/www/html $ sudo leafpad mp4.php
+pi@webserver:/var/www/html $ cd ../..
+pi@webserver:/var $ cd ..
+pi@webserver:/ $ ls
+bin   debootstrap  etc   lib         media  opt   root  sbin  sys  usr
+boot  dev          home  lost+found  mnt    proc  run   srv   tmp  var
+pi@webserver:/ $ cd mnt
+pi@webserver:/mnt $ ls
+nfs
+pi@webserver:/mnt $ cd nfs
+pi@webserver:/mnt/nfs $ ls -a
+.          small.avi  small.mkv  small.mpeg  small.vob
+..         small.flv  small.mov  small.mpg   small.webm
+small.3gp  small.m4v  small.mp4  small.mts   small.wmv
+pi@webserver:/mnt/nfs $ ls
+small.3gp  small.flv  small.mkv  small.mp4   small.mpg  small.vob   small.wmv
+small.avi  small.m4v  small.mov  small.mpeg  small.mts  small.webm
+pi@webserver:/mnt/nfs $ cd ..
+pi@webserver:/mnt $ showmount -e
+clnt_create: RPC: Port mapper failure - Unable to receive: errno 0 (Success)
+pi@webserver:/mnt $ ls
+nfs
+pi@webserver:/mnt $ cd nfs
+pi@webserver:/mnt/nfs $ ls
+small.3gp  small.flv  small.mkv  small.mp4   small.mpg  small.vob   small.wmv
+small.avi  small.m4v  small.mov  small.mpeg  small.mts  small.webm
+pi@webserver:/mnt/nfs $ cd ../../../var/www
+pi@webserver:/var/www $ ls
+html
+pi@webserver:/var/www $ sudo mkdir -p /mnt/nfs
+pi@webserver:/var/www $ ls
+html
+pi@webserver:/var/www $ ls -a
+.  ..  html
+pi@webserver:/var/www $ cd html
+pi@webserver:/var/www/html $ ls
+index.html  index.nginx-debian.html  mp4.php  small.mp4
+pi@webserver:/var/www/html $ sudo mkdir -p /mnt/nfs
+pi@webserver:/var/www/html $ ls
+index.html  index.nginx-debian.html  mp4.php  small.mp4
+pi@webserver:/var/www/html $ cd ../
+pi@webserver:/var/www $ ls
+html
+pi@webserver:/var/www $ mkdir php
+mkdir: cannot create directory ‘php’: Permission denied
+pi@webserver:/var/www $ sudo mkdir php
+pi@webserver:/var/www $ ls
+html  php
+pi@webserver:/var/www $ sudo mkdir mnt
+pi@webserver:/var/www $ ls
+html  mnt  php
+pi@webserver:/var/www $ rmdir php
+rmdir: failed to remove 'php': Permission denied
+pi@webserver:/var/www $ sudo rmdir
+rmdir: missing operand
+Try 'rmdir --help' for more information.
+pi@webserver:/var/www $ sudo rmdir php
+pi@webserver:/var/www $ ls
+html  mnt
+pi@webserver:/var/www $ cd mnt
+pi@webserver:/var/www/mnt $ ls
+pi@webserver:/var/www/mnt $ cd nfs
+bash: cd: nfs: No such file or directory
+pi@webserver:/var/www/mnt $ sudo mkdir nfs
+pi@webserver:/var/www/mnt $ ls
+nfs
+pi@webserver:/var/www/mnt $ cd ../..
+pi@webserver:/var $ cd www
+pi@webserver:/var/www $ sudo chown -R pi:pi /mnt/nfs
+pi@webserver:/var/www $ ls
+html  mnt
+pi@webserver:/var/www $ sudo mount 130.254.204.40:/mnt/nfsserver /mnt/nfs
+pi@webserver:/var/www $ cd mnt/nfs
+pi@webserver:/var/www/mnt/nfs $ ls
+pi@webserver:/var/www/mnt/nfs $ ls -a
+.  ..
+pi@webserver:/var/www/mnt/nfs $ showmount -e
+clnt_create: RPC: Port mapper failure - Unable to receive: errno 0 (Success)
+pi@webserver:/var/www/mnt/nfs $ sudo mount 130.254.204.40:/mnt/nfsserver /var/www/mnt/nfs
+pi@webserver:/var/www/mnt/nfs $ ls
+pi@webserver:/var/www/mnt/nfs $ cd ../
+pi@webserver:/var/www/mnt $ ;s
+bash: syntax error near unexpected token `;'
+pi@webserver:/var/www/mnt $ ls
+nfs
+pi@webserver:/var/www/mnt $ cd ..
+pi@webserver:/var/www $ sudo mount 130.254.204.40:/mnt/nfsserver /var/www/mnt/nfs
+pi@webserver:/var/www $ ls
+html  mnt
+pi@webserver:/var/www $ cd /mnt/nfs
+pi@webserver:/mnt/nfs $ ls
+lost+found  nfsserver
+pi@webserver:/mnt/nfs $ cd nfsserver
+pi@webserver:/mnt/nfs/nfsserver $ cd 
+pi@webserver:~ $ cd var/www/nfs
+bash: cd: var/www/nfs: No such file or directory
+pi@webserver:~ $ showmount -e
+clnt_create: RPC: Port mapper failure - Unable to receive: errno 0 (Success)
+pi@webserver:~ $ cd
+pi@webserver:~ $ ls
+$              install       Public                      sudo
+apt-get        MagPi         python3-flask               Templates
+Desktop        Music         python_games                Videos
+Documents      oldconffiles  roboticPark
+Downloads      Pictures      roboticPark.db
+helloworld.py  pi:pi         rpiWebServerpi@webserver:~
+pi@webserver:~ $ cd ../..
+pi@webserver:/ $ ls
+bin   debootstrap  etc   lib         media  opt   root  sbin  sys  usr
+boot  dev          home  lost+found  mnt    proc  run   srv   tmp  var
+pi@webserver:/ $ cd mnt
+pi@webserver:/mnt $ ls
+nfs
+pi@webserver:/mnt $ cd nfs
+pi@webserver:/mnt/nfs $ ls
+lost+found  nfsserver
+pi@webserver:/mnt/nfs $ cd nfsserver
+pi@webserver:/mnt/nfs/nfsserver $ ls
+notes.txt  PexelsVideos1623864(1).mp4  SampleVideo.mp4
+pi@webserver:/mnt/nfs/nfsserver $ sudo umount -f -l /mnt
+umount: /mnt: not mounted
+pi@webserver:/mnt/nfs/nfsserver $ sudo umount -f -l /mnt/nfs
+pi@webserver:/mnt/nfs/nfsserver $ ls
+notes.txt  PexelsVideos1623864(1).mp4  SampleVideo.mp4
+pi@webserver:/mnt/nfs/nfsserver $ cd ../
+pi@webserver:(unreachable)/ $ cd ../
+pi@webserver:(unreachable)/ $ cd../..
+bash: cd../..: No such file or directory
+pi@webserver:(unreachable)/ $ cd ../../..
+pi@webserver:(unreachable)/ $ cd
+pi@webserver:~ $ cd ../..
+pi@webserver:/ $ ls
+bin   debootstrap  etc   lib         media  opt   root  sbin  sys  usr
+boot  dev          home  lost+found  mnt    proc  run   srv   tmp  var
+pi@webserver:/ $ cd mnt
+pi@webserver:/mnt $ ls
+nfs
+pi@webserver:/mnt $ cd nfs
+pi@webserver:/mnt/nfs $ ls
+small.3gp  small.m4v  small.mp4   small.mts   small.wmv
+small.avi  small.mkv  small.mpeg  small.vob
+small.flv  small.mov  small.mpg   small.webm
+pi@webserver:/mnt/nfs $ cd ../..
+pi@webserver:/ $ sudo mount 130.254.204.40:/mnt/nfsserver /var/www/mnt/nfspi@webserver:/ $ cd var/www
+pi@webserver:/var/www $ ls
+html  mnt
+pi@webserver:/var/www $ cd mnt
+pi@webserver:/var/www/mnt $ ls
+nfs
+pi@webserver:/var/www/mnt $ cd nfs
+pi@webserver:/var/www/mnt/nfs $ ls
+lost+found  nfsserver
+pi@webserver:/var/www/mnt/nfs $ cd nfsserver
+pi@webserver:/var/www/mnt/nfs/nfsserver $ ls
+notes.txt  PexelsVideos1623864(1).mp4  SampleVideo.mp4
+pi@webserver:/var/www/mnt/nfs/nfsserver $ cd ..
+pi@webserver:/var/www/mnt/nfs $ ls
+lost+found  nfsserver
+pi@webserver:/var/www/mnt/nfs $ cd ..
+pi@webserver:/var/www/mnt $ ls
+nfs
+pi@webserver:/var/www/mnt $ cd ..
+pi@webserver:/var/www $ ls
+html  mnt
+pi@webserver:/var/www $ cd html
+pi@webserver:/var/www/html $ ls
+index.html  index.nginx-debian.html  mp4.php  small.mp4
+pi@webserver:/var/www/html $ sudo index.php
+sudo: index.php: command not found
+pi@webserver:/var/www/html $ sudo leafpad index.php
+pi@webserver:/var/www/html $ sudo leafpad index.html
+pi@webserver:/var/www/html $ sudo leafpad index.html
+pi@webserver:/var/www/html $ cd ..
+pi@webserver:/var/www $ sudo umount -f -l /mnt/nfs
+umount: /mnt/nfs: not mounted
+pi@webserver:/var/www $ sudo umount -f -l var/www/mnt/nfs
+umount: var/www/mnt/nfs: mountpoint not found
+pi@webserver:/var/www $ ls
+html  mnt
+pi@webserver:/var/www $ cd mnt
+pi@webserver:/var/www/mnt $ ls
+nfs
+pi@webserver:/var/www/mnt $ cd nfs
+pi@webserver:/var/www/mnt/nfs $ ls
+lost+found  nfsserver
+pi@webserver:/var/www/mnt/nfs $ cd ../../../..
+pi@webserver:/ $ ls
+bin   debootstrap  etc   lib         media  opt   root  sbin  sys  usr
+boot  dev          home  lost+found  mnt    proc  run   srv   tmp  var
+pi@webserver:/ $ sudo umount -f -l var/www/mnt/nfs
+pi@webserver:/ $ cd var/www
+pi@webserver:/var/www $ ls
+html  mnt
+pi@webserver:/var/www $ cd mnt
+pi@webserver:/var/www/mnt $ ls
+nfs
+pi@webserver:/var/www/mnt $ cd nfs
+pi@webserver:/var/www/mnt/nfs $ ls
+pi@webserver:/var/www/mnt/nfs $ cd ../../../../
+pi@webserver:/ $ sudo mount 130.254.204.40:/mnt/nfsserver /var/www/html/mnt/nfs
+mount.nfs: mount point /var/www/html/mnt/nfs does not exist
+pi@webserver:/ $ cd var/www/html
+pi@webserver:/var/www/html $ cd ../../../../
+pi@webserver:/ $ sudo mkdir -p /var/www/html/mnt/nfs
+pi@webserver:/ $ sudo chown -R pi:pi /var/www/html/mnt/nfs
+pi@webserver:/ $ sudo mount 130.254.204.40:/mnt/nfsserver /var/www/html/mnt/nfs
+pi@webserver:/ $ cd /var/www/html/mnt/nfs
+pi@webserver:/var/www/html/mnt/nfs $ ls
+lost+found  nfsserver
+pi@webserver:/var/www/html/mnt/nfs $ cd nfsserver
+pi@webserver:/var/www/html/mnt/nfs/nfsserver $ ls
+notes.txt  PexelsVideos1623864(1).mp4  SampleVideo.mp4
+pi@webserver:/var/www/html/mnt/nfs/nfsserver $
