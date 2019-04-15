@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="favicon.ico" type="image/gif" sizes="16x16"/>
+    <title>Video Archive</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">    
+    <link rel="stylesheet" href="includes/global.css">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:600|Fontdiner+Swanky|Orbitron:700|ZCOOL+QingKe+HuangYou|Crimson+Text:600|Montserrat" rel="stylesheet">
+  </head>
+  <body>
+
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1><span class="highlight">Georgia Southern </span> Robotic Playground</h1>
+        </div>
+        <nav>
+          <ul>
+            <li class="current"><a href="index.html" class="hvr-icon-spin"><i class="fas fa-home fa-lg hvr-icon"></i></a>
+            <li><a href="schedule.html" class="hvr-underline-from-center">Schedule</a></li>
+            <li><a href="stream.html" class="hvr-underline-from-center">Live Stream</a></li>
+            <li><a href="archive.php" class="hvr-underline-from-center">Archive</a></li>
+            <li class="current"><a href="faqs.html" class="hvr-underline-from-center">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+<div class="container">
+<h2 style="font-family: 'Exo 2', sans-serif;">Frequently Asked Questions</h2>
+<hr class="faq">
+<br>
+
+  <h1>General</h1>
+      <button class="accordion">What is the Robotic Playground?</button>
+      <div class="panel">
+        <p>The Robotic Playground is a place where students from all over the world can come and explore the wonders of robotics programming!</p>
+      </div>
+
+      <button class="accordion">Who is the Robotic Playground intended for?</button>
+      <div class="panel">
+        <p>This is a place intended for students primarily, but anyone with an interest in basic programming, or robotics are welcome.</p>
+      </div>
+
+      <button class="accordion">How do I use the Robotic Playground?</button>
+      <div class="panel">
+        <p>Anyone who desires to interact with the playground are welcome to schedule an appointment. Once you have selected your time and date, you will receieve a link to a special page designed just for you! This is a secret link so do not share with anyone. The link will not become active until you 5 minutes prior to your scheduled time</p>
+        <p>Once you have accessed the secret page, you can control the robots by writing your own scripts (following the guidelines set before you) or by uisng the plot points to control the robots around the 5 x 5 grid.</p>
+      </div>
+
+  <h1>Scheduling</h1>
+      <button class="accordion">How do I schedule a sesssion with the robotic playground?</button>
+      <div class="panel">
+        <p>Click on the 'Schedule' link and follow the steps. You will select an available date and an available time. Then a secret link will be sent to you. Do not share the link with anyone!</p>
+      </div>
+
+      <button class="accordion">How long does a session with the RP last?</button>
+      <div class="panel">
+        <p>A session will last for 10 minutes. We do this to keep our video recording processing down. This allows for us to allow as many people to access the site as possible.</p>
+      </div>
+
+      <button class="accordion">How do I reschedule if I miss my session?</button>
+      <div class="panel">
+        <p>Unfortunately, you will need to go through the process of scheduling a new date and time in order to be fair to other users.</p>
+      </div>
+
+  <h1>Software</h1>
+      <button class="accordion">What languages are the website written in?</button>
+      <div class="panel">
+        <p>We use HTML5, CSS3, JavaScript, and PHP.</p>
+      </div>
+
+      <button class="accordion">What languages are used to make the robots move?</button>
+      <div class="panel">
+        <p>This is pending as of this moment. The idea is that they will use C++ and our site will use a python interpreter for users to control them.</p>
+      </div>
+
+  <h1>Video</h1>
+      <button class="accordion">How do I view my video after the session has ended?</button>
+      <div class="panel">
+        <p>Once your session has ended, allow for 10 minutes to pass and then check the archive page. At this point the video should be added to the end of the archive carousel.</p>
+      </div>
+
+      <button class="accordion">Can I download my video or any other videos from the archive?</button>
+      <div class="panel">
+        <p>At this time, we do not have the ability for you to download the videos. This will be added in the future.</p>
+      </div>
+
+      <button class="accordion">How long do archived videos stay in the archive?</button>
+      <div class="panel">
+        <p>The videos will stay up forever at this point in time. It is possible we will need to add an auto-removal system in the future.</p>
+      </div>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+<footer class="footer-distributed">
+  <div class="footer-right">
+    <a href="https://www.w3schools.com/css/default.asp"><i class="fab fa-css3-alt"></i></a>
+    <a href="https://www.w3schools.com/html/default.asp"><i class="fab fa-html5"></i></a>
+    <a href="https://www.w3schools.com/php/default.asp"><i class="fab fa-php"></i></a>
+    <a href="https://www.w3schools.com/js/js_intro.asp"><i class="fab fa-js-square"></i></a>
+  </div>
+  <div class="footer-left">
+    <p class="footer-links">
+      <a href="index.html">Home</a>
+        ·
+      <a href="schedule.html">Schedule</a>
+        ·
+      <a href="stream.html">Live Stream</a>
+        ·
+      <a href="faqs.html">FAQ</a>
+        ·
+      <a href="archive.php">Archive</a>
+    </p>
+    <p>Georgia Southern University &copy; 2019</p>
+  </div>
+</footer>
+  </body>
+</html>
